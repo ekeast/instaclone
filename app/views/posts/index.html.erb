@@ -1,6 +1,12 @@
 <h1>Instaclone</h1>
-
-<% @posts.each do |post| %>
-  <%=image_tag(post.image(:medium)) %>
-  <%= post.caption %>
-<% end %>
+<div class="posts-wrapper row">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="post-head">
+        <h3 class="name">Ted Keast</h3>
+      </div>
+        <%= image_tag(post.image(:medium)) %>
+        <p><%= post.caption %></p>
+      </div>
+  <% end %>
+</div>
