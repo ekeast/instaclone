@@ -5,7 +5,7 @@
       <div class="post-head">
         <h3 class="name">Ted Keast</h3>
       </div>
-        <%= image_tag(post.image(:medium)) %>
+        <%= link_to image_tag(post.image(:medium)), post_path(post) %>
         <p><%= post.caption %></p>
       </div>
   <% end %>
